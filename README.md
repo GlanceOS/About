@@ -1,49 +1,49 @@
-# 🌊 GlanceOS — OneUI 8 For PCs and Laptops 🚀
+# 🌌 GlanceOS: Matrix Edition
 
-An ambitious, independent project aimed at porting Samsung's OneUI ecosystem and framework directly onto native x86_64 PC hardware. Built from the ground up on pure AOSP, completely decoupled from standard Android-x86 distributions.
-
----
-
-## 🎯 The Vision
-
-While standard Android distributions for PC focus on clone-like desktop interfaces, **GlanceOS** bridges the gap between Samsung’s premium ecosystem and standard desktop computers. We are extracting the core Framework, SystemUI, and application suite from modern Galaxy Tab architectures and transplanting them into a clean, optimized PC environment.
-
-> ⚠️ **Status:** Active Development / Experimental Phase.
+A modern, lightweight Linux distribution overlay tailored for sleek aesthetics and seamless workflow. Built on top of a minimal, rock-solid Linux base, **GlanceOS (Matrix Edition)** replaces traditional desktop environments with a custom, highly fluid user interface focused on performance and industrial design aesthetics.
 
 ---
 
-## ✨ Key Features (Under Development)
+## ✨ Key Features
 
-*   **Pure Core Foundation:** Built directly on pure AOSP x86_64 architecture for lightweight and independent performance.
-*   **One UI Home Integration:** Full desktop-native layout featuring the Galaxy Tablet dock, app drawer blur animations, and responsive split-screen viewports.
-*   **Samsung DeX Capabilities:** Unlocking native Desktop Mode on PC hardware, allowing a full multi-window workstation experience.
-*   **SystemUI Transplant:** Replaced standard AOSP status bars with the iconic rounded, fluent OneUI Control Center and quick settings.
-*   **ARM-to-x86 Translation Layer:** Native integration of translation bridges (`libhoudini` / `libndk`) to allow proprietary Samsung apps to execute flawlessly on Intel and AMD processors.
-
----
-
-## 🛠️ Installation Steps (Experimental)
-
-Since GlanceOS is built as a native standalone live image, you can flash it and run it directly from a USB drive without touching your main hard drive.
-
-1.  **Prepare your USB Drive:** Plug in a USB flash drive (Minimum 4GB - 8GB recommended).
-2.  **Download the Tool:** Open **Rufus** (latest version).
-3.  **Select the Image:** Choose the target GlanceOS `.iso` image in Rufus.
-4.  **Configure Partition Scheme:**
-    *   Select **MBR** if you are targeting older BIOS systems.
-    *   Select **GPT** if you are targeting modern UEFI systems.
-5.  **Flash in DD Mode (Crucial):** Click *Start*. When prompted by Rufus, make sure to select **Write in DD Image mode**. Android-x86 based structures require DD mode to properly construct the boot sectors.
-6.  **Boot:** Restart your PC, press your motherboard's Boot Menu key (F12, F11, F8, or Esc), and select your USB drive. Choose **"Run GlanceOS without installation"** to test it live!
+*   **Glassmorphism UI:** A gorgeous, hardware-accelerated interface built entirely around deep dark-blue themes and frosted glass panels (`glass-panel` effects).
+*   **The Matrix Dashboard:** A unified, minimalist home dashboard displaying system vitals, active projects, and shortcuts at a single glance.
+*   **Custom Quick Panel:** An ultra-responsive control center for toggling system states, completely redesigned from the ground up to bypass corporate OS clutter.
+*   **Minimal & Lean:** No bloatware. Built for creators, developers, and technical modelers who need every ounce of hardware performance.
 
 ---
 
-## 🐛 Known Bugs & Workarounds (Alpha Stage)
+## 🛠️ Tech Stack & Architecture
 
-As we are manually transplanting the Samsung framework into a pure x86_64 environment, expect heavy instability in this alpha phase.
+GlanceOS doesn't reinvent the low-level kernel; instead, it supercharges a minimal Linux base with a custom-engineered display layer.
 
-*   **Samsung Account Sign-in:** `CRITICAL` — Currently bootloops or crashes. The system searches for Samsung Knox components and security chips which do not exist on standard PC hardware. 
-    *   *Workaround:* Skip Samsung Account setup during the first boot wizard.
-*   **Hardware Acceleration (GPU):** `MEDIUM` — Some OneUI blur animations (like the app drawer background) might lag or cause visual artifacts on older Intel HD Graphics or Nvidia cards due to GLES translation layers.
-*   **Audio Routing:** `LOW` — Sound might not automatically switch when plugging in HDMI or external audio jacks.
-*   **DeX Mode Resolution:** `MEDIUM` — When launching Samsung DeX on certain ultrawide monitors, the UI scaling might distort. 
-    *   *Workaround:* Force standard 16:9 or 16:10 resolutions in the display options.
+*   **Base:** Minimal Linux Distribution (Debian/Ubuntu-based core)
+*   **Display Compositor:** Wayland / Custom Lightweight Window Manager
+*   **Front-End Layer:** Advanced HTML5 / Modern CSS (Glassmorphism, CSS Blur Filters) / JavaScript (ES6+) for an ultra-smooth, web-tech driven shell
+
+---
+
+## 📅 Roadmap & Project Status
+
+### Phase 1: UI/UX & Shell Design 🚧 *(Current)*
+*   [ ] Design the core CSS glassmorphism framework
+*   [ ] Build the interactive **Matrix Dashboard** prototype
+*   [ ] Develop the HTML/CSS template for the **Quick Panel**
+
+### Phase 2: Linux Integration & Tiling
+*   [ ] Map the web-based UI shell to a lightweight Linux window manager
+*   [ ] Implement system-level toggles (Wi-Fi, Bluetooth, Audio) into the Quick Panel
+
+### Phase 3: Hardware & Distribution
+*   [ ] Package the OS into a bootable `.iso` format for direct PC installation
+*   [ ] Optimize resource usage for 3D modeling pipelines and multi-client workflows
+
+---
+
+## 🤝 Credits & Collaboration
+
+*   **Lead Architect & Designer:** [Your Name / GitHub Profile] — Vision, UI/UX conceptualization, and hardware implementation.
+*   **Core Systems AI:** Gemini — Technical implementation helper, script engineer, and architecture consultant.
+
+---
+*GlanceOS is an open-source project dedicated to bringing absolute aesthetic freedom back to personal computing.*
